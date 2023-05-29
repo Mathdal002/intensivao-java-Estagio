@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+/*Estrutura switch-case:
+ * Quando se tem várias opções de fluxo a serem tratadas como base no valor de uma variável,
+ * ao invés de várias estruturas if-else encadeadas, alguns preferem utilizar a estrutura switch-case
+ */
+public class Program {
+	public static void main(String[] args) {
+		// Solução com if-else
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		String dia;
+		
+		if (x == 1) {
+			dia = "Domingo";
+		} else if (x == 2) {
+			dia = "Segunda-feira";
+		} else if (x == 3) {
+			dia = "Terça-feira";
+		} else if (x == 4) {
+			dia = "Quarta-feira";
+		} else if (x == 5) {
+			dia = "Quinta-feira";
+		} else if (x == 6) {
+			dia = "Sexta-feira";
+		} else {
+			dia = "Sabado";
+		}
+		System.out.println("Hoje é " + dia);
+		
+		// Solução com Switch-case:
+		int y = sc.nextInt();
+		String day;
+		
+		switch (y) {
+		case 1:
+			day = "Domingo";
+	        break;
+		case 2:
+			day = "Segunda-feira";
+			break;
+		case 3:
+			day = "Terça-feira";
+			break;
+		case 4:
+			day = "Quarta-feira";
+			break;
+		case 5 :
+			day = "Quinta-feira";
+			break;
+		case 6:
+			day = "Sexta-feira";
+			break;
+		case 7 :
+			day = "Sabado";
+			break;
+		default:
+			day = "Valor invalido";
+			break;
+		}
+		System.out.println("Dia da semana: " + dia);
+	}
+}
