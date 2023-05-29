@@ -1,34 +1,46 @@
-import java.util.Locale;
 
 public class Program {
 	public static void main(String[] args) {
-		// imprimir mensagem 
-		System.out.println("Olá Mundo");
-		System.out.println("Bom dia ");
+	 // A = Math.squart(x); -> Variável A recebe a raiz quadrada de x -> sqrt = raiz quadrada
+	 // A = Math.pow(x,y); -> Variável A recebe o resultado de x elevado a y -> pow = ponteciação
+     // A = Math.abs(x); -> Variável A recebe o valor absoluto de x -> abs = valor absoluto
+		double x = 3.0;
+		double y = 4.0;
+		double z = -5.0;
+		double A, B, C;
+		double a, b, c;
 		
-		// Para escrever o conteúdo de uma variável de algum tipo básico
-		int y = 32;
-		System.out.println(y);
+		A = Math.sqrt(x);
+		B = Math.sqrt(y);
+		C = Math.sqrt(25.0);
+		System.out.println("Raiz quadrada de " + x + " = " + A);
+		System.out.println("Raiz quadrada de " + y + " = " + B);
+		System.out.println("Raiz quadrada de 25 = " + C);
 		
-		// Para escrever o conteúdo de uma variável com ponto flutuante 
-		double x = 10.35784;
-		System.out.println(x);
-		System.out.printf("%.2f%n", x);
-		System.out.printf("%.4f%n", x);
-		Locale.setDefault(Locale.US);
-		System.out.printf("%.4f%n", x);
+		A = Math.pow(x, y);
+		B = Math.pow(x, 2.0);
+		C = Math.pow(5.0, 2.0);
+		System.out.println(x + " elevado a " + y + " = " + A);
+		System.out.println(x + " elevado ao quadrado = " + B);
+		System.out.println("5 elevado ao quadrado = " + C);
 		
-		// Para concatenar vários elementos em um mesmo comando de escrita
+		A = Math.abs(y);
+		B = Math.abs(z);
+		System.out.println("Valor absoluto de " + y + " = " + A);
+		System.out.println("Valor absoluto de " + z + " = " + B);
 		
-		System.out.println("Resultado = " + x + " METROS");
+		// formula de baskara
+		double delta, x1, x2;
+		a = x;
+		b = y;
+		c = z;
 		
-		// Para concatenar vários elementos em um mesmo comando de escrita
-		System.out.printf("RESULTADO = %.2f metros%n", x);
+		delta = Math.pow(b, 2.0) - 4*a*c;
+		x1 = (-b + Math.sqrt(delta)) / (2.0*a);
+		x2 = (-b - Math.sqrt(delta)) / (2.0*a);
 		
-		// Para concatenar vários elementos em um mesmo comando de escrita com muitos elementos
-		String nome = "Maria";
-		int idade = 31;
-		double renda = 4000.0;
-		System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+		System.out.println("delta = " + delta);
+		System.out.println("x1 = " + x1);
+		System.out.println("x2 = " + x2);
 	}
 }
