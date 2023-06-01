@@ -3,39 +3,21 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Product;
+import entities.Rectangle;
 
 public class Program {
-	public static void main(String[]args) {
+	public static void main(String[] args){
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
-		System.out.println("Enter product data: ");
-		System.out.print("Name: ");
-		product.name = sc.nextLine();
-		System.out.println("Price: ");
-		product.price = sc.nextDouble();
-		System.out.print("Quantity in stock: ");
-		product.quantity = sc.nextInt();
-		
+		Rectangle rectangle = new Rectangle();
+		System.out.println("Enter rectangle largura and altura");
+		rectangle.largura = sc.nextDouble();
+		rectangle.altura = sc.nextDouble();
+		String ar;
 		System.out.println();
-		System.out.println("Product data" + product);
-		
-		System.out.println();
-		System.out.print("Enter the number of products to be added in stock: ");
-		int quantity = sc.nextInt();
-		product.addProducts(quantity);
-		
-		System.out.println();
-		System.out.println("Updated data: " + product);
-		
-		System.out.println();
-		System.out.println("Enetr the number of products to be removed from stock: ");
-		quantity = sc.nextInt();
-		product.removeProduct(quantity);
-		
-		System.out.println();
-		System.out.println("Update data: " + product);
+		System.out.printf(" AREA = %.2f%n", rectangle.area());
+		System.out.printf(" PERIMETRO = %.2f%n", rectangle.perimetro());
+		System.out.printf(" DIAGONAL = %.2f%n", rectangle.diagonal());;
 	}
 }
